@@ -51,12 +51,15 @@ img {
   margin-left: 40px;
   position: relative;
 }
+.nav__links li a {
+  color: #ffffff;
+}
 .nav__links li a::after {
   position: absolute;
   content: "";
   width: 0;
   height: 5px;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   top: 45px;
   left: 0;
   transition: all 0.2s ease;
@@ -71,13 +74,20 @@ img {
 .subtitle {
   font-weight: 500;
   font-size: 16px;
-  color: #FFFFFF;
+}
+
+.subtitle {
+  color: #999999;
+}
+
+.white-text {
+  color: #ffffff;
 }
 
 .line {
   width: 100%;
   height: 1px;
-  background-color: #A1A1A1;
+  background-color: #a1a1a1;
 }
 
 .hero {
@@ -93,24 +103,24 @@ img {
 .hero__title {
   font-weight: 800;
   font-size: 48px;
-  color: #FFFFFF;
+  color: #ffffff;
   margin: 20px 0 50px;
 }
 
 .blue-btn {
   width: 200px;
   padding: 13px 35px;
-  background: #4985FF;
+  background: #4985ff;
   box-shadow: 0px 0px 10px rgba(111, 111, 111, 0.25);
   border-radius: 30px;
   font-weight: 500;
   font-size: 16px;
-  color: #FFFFFF;
+  color: #ffffff;
   transition: background 0.3s ease;
 }
 
 .blue-btn:hover {
-  background: #5F12D0;
+  background: #5f12d0;
 }
 
 input[type=checkbox] {
@@ -119,8 +129,137 @@ input[type=checkbox] {
 
 .menu-btn {
   font-size: 18px;
-  color: #FFFFFF;
+  color: #ffffff;
   display: none;
+}
+
+.we-do {
+  padding: 100px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 53px;
+  text-align: center;
+  color: #323232;
+}
+
+.we-do__title {
+  width: 100%;
+  max-width: 739px;
+}
+
+.we-do__subtitle {
+  width: 100%;
+  max-width: 730px;
+  padding: 50px 0 70px;
+}
+
+.we-do__items {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.we-do__item {
+  height: 139px;
+  width: 320px;
+  text-align: left;
+  display: flex;
+  margin-bottom: 50px;
+}
+
+.item-info {
+  margin-left: 15px;
+  align-self: flex-end;
+}
+.item-info h3 {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  color: #000000;
+  margin-bottom: 12px;
+}
+.item-info p {
+  width: 222px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  color: #999999;
+}
+
+.standarts {
+  background-color: #f6f6f8;
+}
+
+.standarts__inner {
+  padding: 100px 0 80px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.standarts__info {
+  width: 50%;
+}
+.standarts__info a {
+  font-weight: 500;
+  font-size: 16px;
+  text-decoration-line: underline;
+  color: #4985ff;
+}
+.standarts__info a:hover {
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.standarts__title {
+  text-align: left;
+}
+
+.standarts__subtitle {
+  padding: 40px 0 30px;
+}
+
+.standarts__img {
+  width: 45%;
+  display: flex;
+  justify-content: center;
+}
+
+.projects {
+  width: 100%;
+  padding: 70px 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.projects__item {
+  display: grid;
+  grid-template-columns: 30px 55px;
+  grid-gap: 15px;
+  align-items: center;
+  margin: 20px;
+}
+.projects__item h5 {
+  font-weight: 400;
+  font-size: 36px;
+  color: #000000;
+}
+.projects__item p {
+  grid-column: 1/span 2;
+  font-size: 16px;
+  color: #999999;
 }
 
 @media (max-width: 700px) {
@@ -141,7 +280,7 @@ input[type=checkbox] {
     justify-content: flex-start;
   }
   .nav__links li {
-    margin: 25px 0;
+    margin: 18px 0;
   }
   .nav__links li a::after {
     top: 30px;
@@ -151,12 +290,39 @@ input[type=checkbox] {
     right: 0;
   }
 
-  .hero {
+  .hero,
+.standarts__inner,
+.we-do,
+.projects {
     padding: 50px 0;
   }
 
   .hero__title {
     font-size: 24px;
+  }
+
+  .we-do__items {
+    justify-content: center;
+  }
+
+  .standarts__img,
+.standarts__info {
+    width: 100%;
+    margin: 10px 0;
+  }
+}
+@media (max-width: 500px) {
+  .title {
+    font-size: 24px;
+    line-height: 26px;
+  }
+
+  .we-do__subtitle {
+    padding: 40px 0;
+  }
+
+  .we-do__item {
+    margin-bottom: 30px;
   }
 }
 
