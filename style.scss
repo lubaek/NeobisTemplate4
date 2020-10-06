@@ -1,5 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&display=swap");
 
+
+
+
 * {
   margin: 0;
   padding: 0;
@@ -53,10 +56,6 @@ img {
     margin-left: 40px;
     position: relative;
 
-    a {
-      color: #ffffff;
-    }
-
     a::after {
       position: absolute;
       content: "";
@@ -77,18 +76,12 @@ img {
 }
 
 .nav__links li a,
-.subtitle {
+.hero__subtitle {
   font-weight: 500;
   font-size: 16px;
-}
-
-.subtitle {
-  color: #999999;
-}
-
-.white-text {
   color: #ffffff;
 }
+
 .line {
   width: 100%;
   height: 1px;
@@ -122,10 +115,11 @@ img {
   font-size: 16px;
   color: #ffffff;
   transition: background 0.3s ease;
+  text-align: center;
 }
 
 .blue-btn:hover {
-  background: #5f12d0;
+  background: #323232;
 }
 
 input[type="checkbox"] {
@@ -139,7 +133,8 @@ input[type="checkbox"] {
 }
 
 // ---------WE DO
-.we-do {
+.we-do,
+.projects__inner {
   padding: 100px 0;
   display: flex;
   flex-direction: column;
@@ -155,6 +150,13 @@ input[type="checkbox"] {
   color: #323232;
 }
 
+.subtitle {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: #999999;
+}
+
 .we-do__title {
   width: 100%;
   max-width: 739px;
@@ -166,7 +168,8 @@ input[type="checkbox"] {
   padding: 50px 0 70px;
 }
 
-.we-do__items {
+.we-do__items,
+.projects__items {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -181,28 +184,40 @@ input[type="checkbox"] {
   margin-bottom: 50px;
 }
 
+.item-title {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  color: #000000;
+}
+
+.item-subtitle {
+  font-weight: 400;
+  font-size: 16px;
+  color: #999999;
+}
+
 .item-info {
   margin-left: 15px;
   align-self: flex-end;
+
   h3 {
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 22px;
-    color: #000000;
     margin-bottom: 12px;
   }
 
   p {
     width: 222px;
-    font-weight: 400;
     font-size: 14px;
-    line-height: 22px;
-    color: #999999;
   }
 }
 
+.white-text {
+  color: #ffffff;
+}
+
 // ---------STANDARTS
-.standarts {
+.standarts,
+.projects {
   background-color: #f6f6f8;
 }
 
@@ -217,21 +232,25 @@ input[type="checkbox"] {
 
 .standarts__info {
   width: 50%;
-  a {
-    font-weight: 500;
-    font-size: 16px;
-    text-decoration-line: underline;
-    color: #4985ff;
-  }
-  a:hover {
-    text-decoration: none;
-    transition: all 0.2s ease;
-  }
 }
+
+.underline-btn {
+  font-weight: 500;
+  font-size: 16px;
+  text-decoration: underline;
+  color: #4985ff;
+}
+
+.underline-btn:hover {
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
 
 .standarts__title {
   text-align: left;
 }
+
 .standarts__subtitle {
   padding: 40px 0 30px;
 }
@@ -242,7 +261,7 @@ input[type="checkbox"] {
   justify-content: center;
 }
 
-.projects {
+.our-projects {
   width: 100%;
   padding: 70px 0;
   display: flex;
@@ -251,12 +270,13 @@ input[type="checkbox"] {
   justify-content: space-around;
 }
 
-.projects__item {
+.our-projects__item {
   display: grid;
   grid-template-columns: 30px 55px;
   grid-gap: 15px;
   align-items: center;
   margin: 20px;
+
   h5 {
     font-weight: 400;
     font-size: 36px;
@@ -265,11 +285,73 @@ input[type="checkbox"] {
 
   p {
     grid-column: 1 / span 2;
-    font-size: 16px;
-    color: #999999;
   }
 }
 
+// ---------WORKS
+.works {
+  width: 100%;
+  background: linear-gradient(180deg, #504DC2 20.44%, #5F12D0 50%, transparent 50%),
+    #ffffff;
+}
+
+.works__inner {
+  padding: 100px 0 80px;
+}
+
+.works__info {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.works__title {
+  text-align: left;
+  width: 100%;
+  max-width: 540px;
+}
+
+.works__items {
+  padding: 70px 0;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  border-bottom: 1px solid #E0E0E0;
+}
+
+.works__item {
+  width: 32%;
+
+  h3 {
+    padding-top: 30px;
+  }
+
+  p {
+    padding: 30px 0;
+  }
+}
+
+.blue-text {
+  color: #4985FF;
+}
+
+// ---------PROJECTS
+.projects__inner h1 {
+  margin-bottom: 50px;
+}
+
+.projects__items {
+  padding: 55px 0 35px;
+}
+
+.projects__img {
+  width: 230px;
+  margin-bottom: 15px;
+}
+
+// ---------MEDIA QUERIES
 @media (max-width: 700px) {
   .menu-btn {
     display: block;
@@ -296,29 +378,45 @@ input[type="checkbox"] {
     }
   }
 
-  #click:checked ~ ul {
+  #click:checked~ul {
     right: 0;
   }
 
   .hero,
   .standarts__inner,
   .we-do,
-  .projects {
+  .our-projects,
+  .works__inner,
+  .works__items,
+  .projects__inner {
     padding: 50px 0;
   }
 
   .hero__title {
     font-size: 24px;
   }
-  .we-do__items {
-    justify-content: center;
+
+  .we-do__items,
+  .projects__items {
+    justify-content: space-around;
+  }
+
+  .works {
+    background: #ffffff;
+
+    h1 {
+      color: #323232;
+      margin-bottom: 20px;
+    }
   }
 
   .standarts__img,
-  .standarts__info {
+  .standarts__info,
+  .works__item {
     width: 100%;
     margin: 10px 0;
   }
+
 }
 
 @media (max-width: 500px) {
@@ -330,6 +428,7 @@ input[type="checkbox"] {
   .we-do__subtitle {
     padding: 40px 0;
   }
+
   .we-do__item {
     margin-bottom: 30px;
   }
